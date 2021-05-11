@@ -1,6 +1,8 @@
-import './App.css';
 import React, {useState, useEffect, useReducer} from 'react';
 import Image from '../src/components/common/Image/Image';
+import MainLayout from '../src/components/layout/MainLayout/MainLayout';
+import styles from './App.module.scss';
+import Button from './components/common/Button/Button';
 
 const ACTIONS = {
   ADD: 'ADD',
@@ -36,20 +38,31 @@ function App() {
       });
   },[page]);
   
+  const addPage = () => {
+    setPage(page+1);
+  };
+
+  const removePage = () => {
+    if (page === 1) {
+      window.alert('You are on the first page!');
+    } else setPage(page-1);
+  };
+
   return (
-    <div className="App">
-      <h3>My pinterest-app 
-          nr strony: { page } 
-      </h3>
-      {images.map(({download_url, author}, index) => {
-        return <Image key={ index } url={ download_url } name={ author }/>;
-      })}
-      <button onClick={() => setPage(page-1)}> 
-        Minus
-      </button>
-      <button onClick={() => setPage(page+1)}> 
-        Plus
-      </button>
+    <div className={styles.app}>
+      <MainLayout>
+        <div >
+          {images.map(({download_url, author}, index) => {
+            return <Image key={ index } url={ download_url } name={ author }/>;
+          })}
+        </div>
+        <Button handler={removePage} variant='amount'> 
+          <i className='fas fa-minus'/>
+        </Button>
+        <Button handler={addPage} variant='amount'> 
+          <i className='fas fa-plus'/>
+        </Button>
+      </MainLayout>
     </div>
   );
 }

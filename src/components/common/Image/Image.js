@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Image.module.scss';
+
 
 const Image = ({url, name}) => {
-  const adjustSize = url => url.replace(url.slice(url.indexOf('/', 25)), '/100/100');
+  const adjustSize = url => url.replace(url.slice(url.indexOf('/', 25)), '/200/250');
   
-  return(
-    <img id="photo" src={adjustSize(url)} alt={name}/>
+  return (
+    <img className={styles.picture}  src={adjustSize(url)} alt={name} />
   );
 };
 
