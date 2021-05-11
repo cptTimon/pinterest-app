@@ -6,7 +6,6 @@ const Button = ({
   children,
   variant,
   handler,
-  ...props
 }) => {
   const classes = [];
   if (variant) classes.push(styles[variant]);
@@ -14,7 +13,7 @@ const Button = ({
 
   return (
     <button className={classes.join(' ')} onClick={handler} >
-      {children}
+      { children }
     </button>
   );
 };
