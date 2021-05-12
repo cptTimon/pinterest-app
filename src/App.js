@@ -1,6 +1,6 @@
 import React from 'react';
-import {AppStoreProvider} from './stores/AppStore';
-import {Main} from './components/Application/Main';
+import { AppStoreProvider } from './stores/AppStore';
+import { Main } from './components/Application/Main';
 
 function App() {
   return (

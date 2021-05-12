@@ -1,19 +1,21 @@
 @import "normalize.scss";
+@import "settings.scss";
 
 *, *::before, *::after {
   box-sizing: border-box;
-
 }
+
 body {
   margin: 0;
   padding: 0;
-  background: $color-light;
   letter-spacing: 0.5px;
+  background-color: $color-background;
 
   h1,h2,h3,h4 {
     margin: 0;
   }
 }
+
 html {
   overflow: -moz-scrollbars-vertical;
   overflow-y: scroll;

@@ -26,15 +26,15 @@ export const Main = () => {
   return (
     <div className={styles.app}>
       <MainLayout>
-        <div >
+        <div>
           {images.map(({author, download_url}, index) => {
-            return <Image key={ index } name={ author } url={ download_url } />;
+            return <Image key={index} name={author} url={download_url} />;
           })}
         </div>
-        <Button handler={ removePage } variant='amount'> 
+        <Button handler={removePage} variant='amount'> 
           <i className='fas fa-minus'/>
         </Button>
-        <Button handler={ addPage } variant='amount'> 
+        <Button handler={addPage} variant='amount'> 
           <i className='fas fa-plus'/>
         </Button>
       </MainLayout>

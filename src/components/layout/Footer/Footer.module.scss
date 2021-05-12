@@ -1,0 +1,22 @@
+@import '../../../styles/settings.scss';
+
+.footer {
+  text-align: left;
+  padding-left: 70px;
+  p {
+    font-size: 20px;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 950px) {
+  .footer {
+    padding-left: 25px;
+  }
+}
