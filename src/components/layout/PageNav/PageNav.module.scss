@@ -1,21 +1,19 @@
 @import '../../../styles/settings.scss';
-@import '../../../styles/global.scss';
 
 .flexboxParent {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px 50px;
 }
 
 .logo {
-  text-align: center;
+  
   i {
     font-size: 50px;
     height: 60px;
     width: 60px;
     border-radius: 25%;
   }
+  
   h4 {
     margin-top: 0
   }
