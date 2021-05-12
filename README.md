@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+To install project, run:
+
+### `yarn` or `yarn install`
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -16,6 +20,10 @@ The page will reload if you make edits.
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.
+
+### `yarn test a`
+
+This script allows you to see the results of all written tests.
 
 ### `yarn build`
 
